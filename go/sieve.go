@@ -11,7 +11,7 @@ import "time"
  * should trade higher memory usage for less scheduling overhead
  */
 const bufsize int = 1000
-const max uint64 = 1000000
+const max uint64 = 100000
 
 /* feed all numbers from 0 to MaxUint64 to out */
 func numbers(out chan uint64, max uint64) {
@@ -24,7 +24,7 @@ func numbers(out chan uint64, max uint64) {
 }
 
 /* read from in, filter out all multiples of p
- * 
+ *
  * first number not filtered is guaranteed to be a prime (if the numbers coming in are pre-filtered with all primes <= p)
  * so feed it to output and set up a new filter goroutine on it
  * feed all further candidates to this new filter
