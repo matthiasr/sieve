@@ -1,10 +1,9 @@
-n_to_check = (2..100000).to_a.reverse!
 primes = []
 
-until n_to_check.empty?
-    i = n_to_check.pop
-    n_to_check.delete_if { |j| j % i == 0 }
-    primes << i
+(2..100000).each do |n|
+  unless primes.any? { |p| n%p == 0 }
+    primes << n
+  end
 end
 
 p primes.length
