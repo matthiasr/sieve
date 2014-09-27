@@ -1,4 +1,4 @@
-n_to_check = (2..100).to_a.reverse!
+n_to_check = (2..100000).to_a.reverse!
 primes = []
 
 until n_to_check.empty?
@@ -7,4 +7,4 @@ until n_to_check.empty?
     primes << i
 end
 
-p primes
+p primes.length

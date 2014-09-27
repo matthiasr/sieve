@@ -13,4 +13,4 @@
     ((isprime? n ps) (primes limit (+ n 1) (cons n ps)))
     (else (primes limit (+ n 1) ps))))
 
-(primes 100 2 (list:nil))
+(length (primes 100000 2 (list:nil)))
