@@ -2,3 +2,6 @@
 /go/sieve
 /irken/*.c
 /irken/primes
+*.hi
+*.o
+/haskell/sieve
