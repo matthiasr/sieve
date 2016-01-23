@@ -1,9 +1,6 @@
 defmodule Sieve do
   def isprime(n, primes) when is_list(primes) and is_integer(n) do
-    case primes do
-      [] -> true
-      [p|ps] -> if rem(n,p) == 0, do: false, else: isprime(n,ps)
-    end
+    !Enum.any?(primes, &(rem(n,&1) == 0))
   end
 
   def primes(maxn, n, ps) when is_integer(n) and is_integer(maxn) and n <= maxn and n > 0 do
