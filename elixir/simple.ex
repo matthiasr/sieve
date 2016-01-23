@@ -11,7 +11,7 @@ defmodule SimpleSieve do
     end
   end
 
-  def primes(maxn) when maxn > 0 do
-    primes(maxn,3,[2])
+  def primes(maxn) when is_integer(maxn) and maxn >= 2 do
+    primes(maxn,2,[])
   end
 end
